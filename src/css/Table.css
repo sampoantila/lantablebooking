@@ -1,0 +1,96 @@
+.table {
+    color: black;
+    display: inline-block;
+}
+
+.table-part {
+    border: 1px solid rgba(0,0,0,0.2);
+    display: inline-block;
+    border-radius: 2px;
+}
+
+.table-chair {
+    height: 7px;
+    width: 45px;
+    background-color: darkcyan;
+    border: 1px solid black;
+    margin-bottom: -4px;
+}
+
+.table-normal {
+    width: 85px;
+    height: 70px;
+    line-height: 70px;
+    /* transform: rotate(45deg); */
+}
+
+.upside-down {
+    transform: rotate(180deg);
+}
+
+.table-group-label {
+    position: absolute;
+    left: 189px;
+    top: 72px;
+    z-index: 10;
+    background-color: aliceblue;
+    padding: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+.table-group-content {
+    position: relative;
+}
+
+.table-group-content-left {
+    transform: rotate(-35deg);
+}
+
+.table-group-content-right {
+    transform: rotate(35deg);
+}
+
+.table-group {
+    display: inline-block;
+    width: 400px;
+    height: 270px;
+    padding-top: 80px;
+    margin-top: 0px;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+
+.food-table {
+    color: black;
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: cyan;
+    display: inline-block;
+    border-radius: 2px;
+    width: 500px;
+    height: 170px;
+    line-height: 170px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.table button {
+    border: none;
+    padding: 0px;
+    /* background: transparent; */
+}
+
+.table-free {
+    background-color: lightgreen;
+}
+
+.table-booked {
+    background-color: lightcoral;
+}
+
+.table-button:hover {
+    background-color: blue;
+    color: white !important;
+}
