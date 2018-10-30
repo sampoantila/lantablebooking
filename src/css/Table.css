@@ -66,12 +66,12 @@
 .food-table {
     color: black;
     border: 1px solid rgba(0,0,0,0.2);
-    background-color: cyan;
+    background-color: silver;
     display: inline-block;
     border-radius: 2px;
-    width: 500px;
-    height: 170px;
-    line-height: 170px;
+    width: 400px;
+    height: 130px;
+    line-height: 130px;
     margin-top: 30px;
     margin-bottom: 20px;
 }
