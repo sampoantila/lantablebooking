@@ -1,7 +1,11 @@
+import axios from "axios";
+
 class tableservice {
 
     constructor() {
         this.booked = "booked";
+        this.host = 'http://localhost:4000/api/v1/lanbooking';
+        // this.host = 'http://consapi.azurewebsites.net/api/v1/lanbooking';
     }
 
     book(location) {
@@ -27,7 +31,11 @@ class tableservice {
     }
 
     isBooked(location) {
-        return localStorage.getItem(location) === this.booked;
+        return axios.get(this.host + '/isbooked/' + location);
+    }
+
+    allBooked() {
+        return axios.get(this.host + '/booked');
     }
 }
 

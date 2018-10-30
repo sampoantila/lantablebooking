@@ -12,7 +12,20 @@ class Table extends Component {
     }
 
     componentWillMount() {
-        this.setState({location: this.props.groupName + this.props.number});
+        var location =  this.props.groupName + this.props.number;
+        this.setState({location: location});
+        // tableservice.isBooked(location)
+        // .then(res => {
+        //     console.log(res);
+        //     this.setState({booked: res.data.booked});
+        // });
+    }
+
+    componentWillReceiveProps(nextProps) {
+        console.log(nextProps.booked);
+        var isBooked = nextProps.booked.find(b => b === this.state.location);
+        console.log("location: " + this.state.location + " isBooked: " + isBooked);
+        this.setState({ booked: isBooked});
     }
 
     onTableClick = (value) => {
