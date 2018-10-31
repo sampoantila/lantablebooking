@@ -9,18 +9,30 @@ class TableGroup extends Component {
             contentClass = " table-group-content-right";
         }
 
+        var tables = [1,2,3,4];
+        var flipTables = [5,6,7,8];
+
         return <div className="table-group">
             <div className={"table-group-content" + contentClass}>
                 <div className="table-group-label">{this.props.name}</div>
-                <Table groupName={this.props.name} number="1" booked={this.props.booked} />
-                <Table groupName={this.props.name} number="2" booked={this.props.booked} />
-                <Table groupName={this.props.name} number="3" booked={this.props.booked} />
-                <Table groupName={this.props.name} number="4" booked={this.props.booked} />
+                {tables.map(item => (
+                    <Table
+                        key={item}
+                        location={this.props.name + item}
+                        booked={this.props.booked}
+                        booking={this.props.booking}
+                        toggle={this.props.toggle} />
+                ))}
                 <br/>
-                <Table groupName={this.props.name} number="5" flip booked={this.props.booked} />
-                <Table groupName={this.props.name} number="6" flip booked={this.props.booked} />
-                <Table groupName={this.props.name} number="7" flip booked={this.props.booked} />
-                <Table groupName={this.props.name} number="8" flip booked={this.props.booked} />
+                {flipTables.map(item => (
+                    <Table
+                        key={item}
+                        flip
+                        location={this.props.name + item}
+                        booked={this.props.booked}
+                        booking={this.props.booking}
+                        toggle={this.props.toggle} />
+                ))}
             </div>
         </div>;
     }

@@ -1,37 +1,26 @@
 import React, { Component } from 'react';
 import "../css/Table.css";
-import tableservice from '../service/tableservice';
 
 class Table extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            booked: false,
-            location: ""
+            booked: false
         }
     }
 
-    componentWillMount() {
-        var location =  this.props.groupName + this.props.number;
-        this.setState({location: location});
-        // tableservice.isBooked(location)
-        // .then(res => {
-        //     console.log(res);
-        //     this.setState({booked: res.data.booked});
-        // });
-    }
-
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps.booked);
-        var isBooked = nextProps.booked.find(b => b === this.state.location);
-        console.log("location: " + this.state.location + " isBooked: " + isBooked);
+        var isBooked = nextProps.booked.includes(this.props.location);
         this.setState({ booked: isBooked});
     }
 
-    onTableClick = (value) => {
-        console.log(value);
-        var booked = tableservice.toggleBooking(value);
-        this.setState({booked: booked});
+    onTableClick = () => {
+        if (this.state.booked === false) {
+            this.props.toggle(this.props.location);
+        }
+        if (this.props.location === this.props.booking) {
+            this.props.toggle(this.props.location);
+        }
     }
 
     render() {
@@ -49,6 +38,11 @@ class Table extends Component {
             tableBooked = "table-booked";
         }
 
+        if (this.props.booking === this.props.location) {
+            // logged user booking here
+            tableBooked = "table-booking";
+        }
+
         return <div className={tableClasses}>
             <div />
             <div className="table-part table-chair" />
@@ -56,7 +50,7 @@ class Table extends Component {
             <div>
                 <button className={"table-button " + tableBooked} onClick={this.onTableClick}>
                     <div className={"table-normal table-part" + tableNumberClass} >
-                        {this.state.location}
+                        {this.props.location}
                     </div>
                 </button>
             </div>

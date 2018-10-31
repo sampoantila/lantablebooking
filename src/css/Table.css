@@ -90,7 +90,23 @@
     background-color: lightcoral;
 }
 
+.table-booked:hover {
+    background-color: lightcoral !important;
+}
+
 .table-button:hover {
-    background-color: blue;
+    background-color: seagreen;
     color: white !important;
+}
+
+.table-booking {
+    background-color: steelblue;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.table-booking:hover {
+    background-color: steelblue;
+    color: whitesmoke;
+    font-weight: bold;
 }

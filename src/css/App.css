@@ -47,3 +47,19 @@
     transform: rotate(360deg);
   }
 }
+
+.check-button {
+  color: whitesmoke;
+  background-color: cadetblue;
+  border: none;
+  border-radius: 2px;
+  padding: 4px 8px;
+  margin-left: 4px;
+  box-shadow: 3px 5px 5px #cccccc;
+}
+
+.check-button:hover {
+  color: lightgray;
+  background-color: rgb(0, 175, 175);
+  box-shadow: 1px 1px 1px #cccccc;
+}
