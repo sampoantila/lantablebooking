@@ -8,26 +8,30 @@ class tableservice {
         // this.host = 'http://consapi.azurewebsites.net/api/v1/lanbooking';
     }
 
-    book(location) {
-        console.log("booked: " + location);
-        localStorage.setItem(location, this.booked);
+    book(email, code, location) {
+        if (email && code && location) {
+            return axios.post(this.host,
+                {
+                    email: email,
+                    code: code,
+                    location: location
+                });
+        }
+
+        return Promise.reject("email, code or location missing");
     }
 
-    free(location) {
-        console.log("freed: "+ location);
-        localStorage.removeItem(location);
-    }
+    free(email, code) {
+        if (email && code) {
+            return axios.post(this.host,
+            {
+                email: email,
+                code: code,
+                location: null
+            });
+        }
 
-    toggleBooking(location) {
-        if (localStorage.getItem(location) === this.booked)
-        {
-            this.free(location);
-            return false;
-        }
-        else {
-            this.book(location);
-            return true;
-        }
+        return Promise.reject("email, code or location missing");
     }
 
     isBooked(location) {
@@ -36,6 +40,11 @@ class tableservice {
 
     allBooked() {
         return axios.get(this.host + '/booked');
+    }
+
+    myBooking(email, code) {
+        var params = `?email=${email}&code=${code}`;
+        return axios.get(this.host + '/check' + params);
     }
 }
 
