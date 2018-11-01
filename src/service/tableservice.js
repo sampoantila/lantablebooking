@@ -4,8 +4,13 @@ class tableservice {
 
     constructor() {
         this.booked = "booked";
-        this.host = 'http://localhost:4000/api/v1/lanbooking';
-        // this.host = 'http://consapi.azurewebsites.net/api/v1/lanbooking';
+        
+        if (process.env.NODE_ENV === 'development') {
+            this.host = 'http://localhost:4000/api/v1/lanbooking';
+        }
+        else {
+            this.host = 'http://consapi.azurewebsites.net/api/v1/lanbooking';
+        }
     }
 
     book(email, code, location) {
