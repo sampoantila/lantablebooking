@@ -9,7 +9,7 @@ class tableservice {
             this.host = 'http://localhost:4000/api/v1/lanbooking';
         }
         else {
-            this.host = 'http://consapi.azurewebsites.net/api/v1/lanbooking';
+            this.host = 'https://consapi.azurewebsites.net/api/v1/lanbooking';
         }
     }
 
