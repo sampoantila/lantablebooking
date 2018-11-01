@@ -2,6 +2,9 @@ import React, {Component} from 'react';
 import TableGroup from './TableGroup';
 import AuthBar from './AuthBar';
 import tableservice from '../service/tableservice';
+import Spinner from 'react-spinner';
+import '../../node_modules/react-spinner/react-spinner.css';
+import '../css/App.css';
 
 class Content extends Component {
     constructor(props) {
@@ -10,7 +13,8 @@ class Content extends Component {
             email: "",
             code: "",
             booked: [],
-            booking: ""
+            booking: "",
+            loading: true
         }
     }
 
@@ -25,10 +29,11 @@ class Content extends Component {
     loadBooked = () => {
         tableservice.allBooked()
         .then(res => {
-            this.setState({booked: res.data});
+            this.setState({booked: res.data, loading: false});
         })
         .catch((err) => {
             console.log(err);
+            this.setState({loading: false});
         });
     }
 
@@ -63,9 +68,18 @@ class Content extends Component {
 
     render() {
         return <div className="App-content">
-            <span>Kirjoita sähköpostisi ja saamasi koodi, sen jälkeen voita varata yhden pöydän vapaista (vihreistä).<br/>
-            Varauksen voi vaihtaa klikkaamalla toista pöytää. Voit varata vain yhden pöydän.</span>
-            <AuthBar setBooking={this.setBooking} setAuth={this.setAuth} booking={this.state.booking} />
+            {this.state.loading
+            ?
+            <div style={{marginTop:70}}>
+                <Spinner />
+            </div>
+            :
+                <div>
+                    <span>Kirjoita sähköpostisi ja saamasi koodi, sen jälkeen voita varata yhden pöydän vapaista (vihreistä).<br/>
+                    Varauksen voi vaihtaa klikkaamalla toista pöytää. Voit varata vain yhden pöydän.</span>
+                    <AuthBar setBooking={this.setBooking} setAuth={this.setAuth} booking={this.state.booking} />
+                </div>
+            }
             <br/>
             <TableGroup name="A" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
             <TableGroup name="B" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
