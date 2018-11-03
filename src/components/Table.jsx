@@ -32,6 +32,24 @@ class Table extends Component {
             tableNumberClass += " upside-down";
         }
 
+        if (this.props.right)
+        {
+            tableNumberClass = "";
+        }
+
+        if (this.props.right && this.props.flip === undefined)
+        {
+            tableNumberClass += " upside-down";
+        }
+
+        if (this.props.rowstart && this.props.right) {
+            tableClasses += " table-rowstart-right";
+        }
+        else if (this.props.rowstart) {
+            tableClasses += " table-rowstart";
+            tableNumberClass += " upside-down";
+        }
+
         var tableBooked = "table-free";
         if (this.state.booked)
         {

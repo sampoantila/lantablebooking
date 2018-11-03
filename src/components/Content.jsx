@@ -74,7 +74,7 @@ class Content extends Component {
                 <Spinner />
             </div>
             :
-                <div>
+                <div style={{marginTop: 10}}>
                     <span>Kirjoita sähköpostisi ja saamasi koodi, sen jälkeen voita varata yhden pöydän vapaista (vihreistä).<br/>
                     Varauksen voi vaihtaa klikkaamalla toista pöytää. Voit varata vain yhden pöydän.</span>
                     <AuthBar setBooking={this.setBooking} setAuth={this.setAuth} booking={this.state.booking} />
