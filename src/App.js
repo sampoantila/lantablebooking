@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import './css/App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Content from './components/Content';
+import MainPage from './components/MainPage';
+import { Route } from 'react-router-dom';
+import AdminPage from './components/AdminPage';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <Content />
-        <Footer />
+        <Route path="/admin" component={AdminPage} />
+        <Route exact path="/" component={MainPage} />
       </div>
     );
   }

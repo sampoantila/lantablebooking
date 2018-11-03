@@ -51,6 +51,12 @@ class tableservice {
         var params = `?email=${email}&code=${code}`;
         return axios.get(this.host + '/check' + params);
     }
+
+    sendEmails() {
+        var code = "lan123Send456Mail";
+        var params = `?code=${code}`;
+        return axios.get(this.host + '/sendEmails' + params);
+    }
 }
 
 export default new tableservice();
