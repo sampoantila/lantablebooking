@@ -33,7 +33,10 @@
     top: 72px;
     z-index: 10;
     background-color: aliceblue;
-    padding: 7px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 13px;
+    padding-right: 13px;
     font-size: 20px;
     font-weight: bold;
     border-radius: 3px;
