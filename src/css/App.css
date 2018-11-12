@@ -33,7 +33,7 @@
 }
 
 .App-content {
-
+  min-width: 1000px;
 }
 
 .App-link {
