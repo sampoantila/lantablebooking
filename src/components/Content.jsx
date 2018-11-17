@@ -90,7 +90,7 @@ class Content extends Component {
                     <TableGroup name="D" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
                     <br/>
                 </div>
-                <div style={{float: "right"}}>
+                <div style={{float: "left"}}>
                     <TableGroup name="E" vertical booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
                 </div>
             </div>
