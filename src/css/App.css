@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  min-width: 1000px;
+  min-width: 1500px;
 }
 
 .App-logo {
@@ -34,7 +34,7 @@
 }
 
 .App-content {
-  min-width: 1000px;
+  min-width: 1500px;
 }
 
 .App-link {
@@ -84,4 +84,12 @@
 
 .header-title {
   font-size: 30px;
+}
+
+.clearfix:after { 
+  content: "."; 
+  visibility: hidden; 
+  display: block; 
+  height: 0; 
+  clear: both;
 }

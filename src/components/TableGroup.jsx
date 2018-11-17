@@ -5,10 +5,15 @@ class TableGroup extends Component {
     render() {
         var contentClass = " table-group-content-left";
         var labelClass = "table-group-label";
+        var sizeClass = " table-group-normal";
 
         if (this.props.right) {
             contentClass = " table-group-content-right";
             labelClass += " upside-down";
+        }
+        if (this.props.vertical) {
+            contentClass = " table-group-content-vertical";
+            sizeClass = " table-group-narrow";
         }
 
         var tables = [1,2,3,4];
@@ -19,7 +24,7 @@ class TableGroup extends Component {
             flipTables = [4,3,2,1];
         }
 
-        return <div className="table-group">
+        return <div className={"table-group" + sizeClass }>
             <div className={"table-group-content" + contentClass}>
                 <div className={labelClass}>{this.props.name}</div>
                 <Table location={this.props.name+"9"}

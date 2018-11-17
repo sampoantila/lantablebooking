@@ -81,12 +81,19 @@ class Content extends Component {
                 </div>
             }
             <br/>
-            <TableGroup name="A" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-            <TableGroup name="B" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-            <br/>
-            <TableGroup name="C" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-            <TableGroup name="D" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-            <br/>
+            <div className="clearfix">
+                <div style={{float: "left"}}>
+                    <TableGroup name="A" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                    <TableGroup name="B" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                    <br/>
+                    <TableGroup name="C" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                    <TableGroup name="D" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                    <br/>
+                </div>
+                <div style={{float: "right"}}>
+                    <TableGroup name="E" vertical booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                </div>
+            </div>
             <div className="food-table">
                 Ruokapöytä
             </div>

@@ -54,15 +54,28 @@
     transform: rotate(210deg);
 }
 
+.table-group-content-vertical {
+    transform: rotate(-90deg);
+    margin-top: 250px;
+}
+
 .table-group {
     display: inline-block;
-    width: 470px;
-    height: 270px;
     padding-top: 80px;
     margin-top: 0px;
     margin-left: 20px;
     margin-right: 10px;
     margin-bottom: 0px;
+}
+
+.table-group-normal {
+    width: 470px;
+    height: 270px;
+}
+
+.table-group-narrow {
+    width: 470px;
+    height: 270px;
 }
 
 .food-table {
@@ -76,6 +89,7 @@
     line-height: 130px;
     margin-top: 30px;
     margin-bottom: 20px;
+    margin-right: 400px;
 }
 
 .table button {
