@@ -91,8 +91,8 @@ class Content extends Component {
                     <br/>
                 </div>
                 <div>
-                    <TableGroup name="E" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-                    <TableGroup name="F" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                    <TableGroup name="E" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                    <TableGroup name="F" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
                 </div>
             </div>
             <div className="food-table">
