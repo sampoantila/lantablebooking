@@ -7,7 +7,7 @@ class Header extends Component {
         return <header className="App-header">
         <div className="header-content">
             <img src={logo} className="App-logo" alt="logo" />
-            <span className="header-title">Lanipöytien varausjärjestelmä</span>
+            <span className="header-title">AsLAN pöytien varausjärjestelmä</span>
             </div>
         </header>;
     }
