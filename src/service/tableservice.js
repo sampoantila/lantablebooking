@@ -52,10 +52,18 @@ class tableservice {
         return axios.get(this.host + '/check' + params);
     }
 
-    sendEmails() {
-        var code = "lan123Send456Mail";
+    sendEmails(code) {
+        if (code === '') {
+            console.error('No code');
+            return false;
+        }
         var params = `?code=${code}`;
         return axios.get(this.host + '/sendEmails' + params);
+    }
+
+    createAccount(code, email) {
+        var params = `?code=${code}&email=${email}`;
+        return axios.get(this.host + '/createaccount' + params);
     }
 }
 
