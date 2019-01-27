@@ -79,7 +79,7 @@ class AuthBar extends Component {
             &nbsp;&nbsp;
             <label>Koodi</label>
             <input style={{margin: 5, padding: 3}}
-                type="text"
+                type="password"
                 id="code"
                 value={this.state.code}
                 onChange={this.handleChangeCode}
