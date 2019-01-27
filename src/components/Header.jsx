@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import logo from '../images/logo.svg';
+import logo from '../images/lanilogo_black_small.png';
 
 class Header extends Component {
 
