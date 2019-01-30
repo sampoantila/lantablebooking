@@ -67,6 +67,11 @@ class Content extends Component {
     }
 
     render() {
+
+        const total = 6*9;
+        var reserved = this.state.booked.length;
+        var free = total - reserved; 
+
         return <div className="App-content">
             {this.state.loading
             ?
@@ -74,11 +79,16 @@ class Content extends Component {
                 <Spinner />
             </div>
             :
+            <div>
+                <div style={{ margin: 3, color: "#c6c6c6"}}>
+                    Vapaana paikkoja: <span>{free}/{total} (varattuja: {reserved})</span>
+                </div>
                 <div style={{marginTop: 10}}>
                     <span>Kirjoita sähköpostisi ja saamasi koodi, sen jälkeen voita varata yhden pöydän vapaista (vihreistä).<br/>
                     Varauksen voi vaihtaa klikkaamalla toista pöytää. Voit varata vain yhden pöydän.</span>
                     <AuthBar setBooking={this.setBooking} setAuth={this.setAuth} booking={this.state.booking} />
                 </div>
+            </div>
             }
             <br/>
             <div className="clearfix">
