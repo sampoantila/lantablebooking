@@ -92,6 +92,12 @@ class FillForm extends React.Component {
             <div className="header-content">
                 <h1>αLanit ilmoittautuminen</h1>
 
+                <center><div class="ui black message six wide field"><div class="textcolor">
+              Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
+              Yksi pistorasia ja yksi nettipistoke per pöytä.
+          Tuo oma jatkojohto ja oma nettipiuha (varajohtoja löytyy kyllä).
+          </div></div></center>
+
                 <form onSubmit={this.addNote} >
                     <label>
                         Etunimi: <input type="text" value={this.state.firstName} onChange={this.handleChangeFirstName} />
