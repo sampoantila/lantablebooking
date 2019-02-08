@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FillFormTopic from '../components/FillFormTopic'
+import logo from '../images/logo.svg';
 
 
 class FillForm extends React.Component {
@@ -88,38 +88,35 @@ class FillForm extends React.Component {
 
     render() {
         console.log('toimiiko fillform');
-        return (
+        return <header className="App-header">
+            <div className="header-content">
+                <h1>αLanit ilmoittautuminen</h1>
+
+                <center><div class="ui black message six wide field"><div class="textcolor">
+              Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
+              Yksi pistorasia ja yksi nettipistoke per pöytä.
+          Tuo oma jatkojohto ja oma nettipiuha (varajohtoja löytyy kyllä).
+          </div></div></center>
+
+                <form onSubmit={this.addNote} >
+                    <label>
+                        Etunimi: <input type="text" value={this.state.firstName} onChange={this.handleChangeFirstName} />
+                        Sukunimi: <input type="text" value={this.state.lastName} onChange={this.handleChangeLastName} />
+                        <p>Sähköposti: <input type="text" value={this.state.email} onChange={this.handleChangeEmail} /></p>
+                    </label>
+                    <input type="submit" value="Submit" />
+                </form>
+
+                <img src={logo} className="App-logo" alt="logo" />
+                <span className="header-title">Täytä Tietosi</span>
+            </div>
 
             <div>
-             <FillFormTopic/>
-            <center><div class="ui black message six wide field"><div class="textcolor">
-                Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
-                Yksi pistorasia ja yksi nettipistoke per pöytä.
-            Tuo oma jatkojohto ja oma nettipiuha (varajohtoja löytyy kyllä).
-          </div></div></center>
-          </div>
-        )
+                {this.state.users.map(name =>
+                    <ul key={name.id}>{name.firstName} {name.lastName} {name.email}</ul>)}
+            </div>
+        </header>;
     }
 }
 
 export default FillForm;
-
-
-        //         <form onSubmit={this.addNote} >
-        //             <label>
-        //                 Etunimi: <input type="text" value={this.state.firstName} onChange={this.handleChangeFirstName} />
-        //                 Sukunimi: <input type="text" value={this.state.lastName} onChange={this.handleChangeLastName} />
-        //                 <p>Sähköposti: <input type="text" value={this.state.email} onChange={this.handleChangeEmail} /></p>
-        //             </label>
-        //             <input type="submit" value="Submit" />
-        //         </form>
-
-        //         <img src={logo} className="App-logo" alt="logo" />
-        //         <span className="header-title">Täytä Tietosi</span>
-        //     </div>
-
-        //     <div>
-        //         {this.state.users.map(name =>
-        //             <ul key={name.id}>{name.firstName} {name.lastName} {name.email}</ul>)}
-        //     </div>
-        // </header>; */
