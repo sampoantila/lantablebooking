@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import lion from '../fillformcomponents/images/logo_black.png';
+
+
 
 class FillFormTopic extends Component {
 
@@ -6,12 +9,11 @@ class FillFormTopic extends Component {
         console.log("ddfdf")
         return (
             <div>
-                123123AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                sdf
-                sdf
-                sdf
-                dfs
-                dfssdf
+                <br></br>
+                <br></br>
+                <center><img class="ui medium image" src={lion} /></center>
+                <br></br>
+                <br></br>
                 df
                 xsxsxsxs
                 xsxsxsxsxs
