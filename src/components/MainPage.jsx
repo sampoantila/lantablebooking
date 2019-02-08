@@ -12,9 +12,9 @@ class MainPage extends Component {
         return <div>
             
             <FillForm />
-            <Header />
-            <Content />
-            <Footer />
+            {/* <Header /> */}
+            {/* <Content /> */}
+            {/* <Footer /> */}
         </div>
     }
 }

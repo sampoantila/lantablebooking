@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FillFormTopic from '../components/FillFormTopic'
+import FillFormTopic from './FillFormTopic';
 
 
 class FillForm extends React.Component {
