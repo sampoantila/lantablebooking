@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FillFormTopic from './fillformcomponents/FillFormTopic';
+import '../css/FillForm.css';
 
 
 class FillForm extends React.Component {
@@ -90,14 +91,14 @@ class FillForm extends React.Component {
         console.log('toimiiko fillform');
         return (
 
-            <div>
-             <FillFormTopic/>
-            <center><div class="ui black message six wide field"><div class="textcolor">
-                Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
-                Yksi pistorasia ja yksi nettipistoke per pöytä.
-            Tuo oma jatkojohto ja oma nettipiuha (varajohtoja löytyy kyllä).
+            <div><main>
+                <FillFormTopic />
+                <center><div class="ui black message six wide field"><div class="textcolor">
+                    Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
+                    Yksi pistorasia ja yksi nettipistoke per pöytä.
+                Tuo oma jatkojohto ja oma nettipiuha (varajohtoja löytyy kyllä).
           </div></div></center>
-          </div>
+            </main></div>
         )
     }
 }

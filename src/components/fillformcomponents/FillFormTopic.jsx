@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import lion from '../fillformcomponents/images/logo_black.png';
+// import lion from '../images/logo_black.png';
+// import '../fillformcomponents_css/FillFormCSS.css';
 
 
 
@@ -9,9 +10,10 @@ class FillFormTopic extends Component {
         console.log("ddfdf")
         return (
             <div>
+                <main></main>
                 <br></br>
                 <br></br>
-                <center><img class="ui medium image" src={lion} /></center>
+                {/* <center><img class="ui medium image" src={lion} /></center> */}
                 <br></br>
                 <br></br>
                 df
