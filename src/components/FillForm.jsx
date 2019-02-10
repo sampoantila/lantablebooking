@@ -93,11 +93,7 @@ class FillForm extends React.Component {
 
             <div><main>
                 <FillFormTopic />
-                <center><div class="ui black message six wide field"><div class="textcolor">
-                    Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
-                    Yksi pistorasia ja yksi nettipistoke per pöytä.
-                Tuo oma jatkojohto ja oma nettipiuha (varajohtoja löytyy kyllä).
-          </div></div></center>
+
             </main></div>
         )
     }

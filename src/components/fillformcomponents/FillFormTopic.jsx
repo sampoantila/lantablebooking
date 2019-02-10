@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import lion from '../images/logo_black.png';
-// import '../fillformcomponents_css/FillFormCSS.css';
-
-
+import lion from '../../images/logo_black.png';
+// import { Button } from 'semantic-ui-react'
 
 class FillFormTopic extends Component {
 
@@ -10,21 +8,31 @@ class FillFormTopic extends Component {
         console.log("ddfdf")
         return (
             <div>
-                <main></main>
-                <br></br>
-                <br></br>
-                {/* <center><img class="ui medium image" src={lion} /></center> */}
-                <br></br>
-                <br></br>
-                df
-                xsxsxsxs
-                xsxsxsxsxs
-                xsxsxsxsxs
+                <main>
+                    <br></br>
+                    <br></br>
+                    <center><img class="ui medium image" src={lion} /></center>
+                    <br></br>
+                    <br></br>
+                    <br></br>
 
-                xsxsxsxsxs
+                    <br></br>
+                    <div class="maintopic">
+                        <link rel="stylesheet" type="text/css" />
+                        <b>AsLANin</b>
+                    </div>
 
-                xsxsxsxs
-             </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+
+                    <div class="topic">
+                        <link rel="stylesheet" type="text/css"  />
+                        <b>ILMOITTAUTUMINEN</b>
+                    </div>
+                </main>
+            </div>
         )
     }
 }
