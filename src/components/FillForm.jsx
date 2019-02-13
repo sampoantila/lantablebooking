@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import FillFormTopic from './fillformcomponents/FillFormTopic';
+import FillFormButton from './fillformcomponents/FillFormButton';
 import '../css/FillForm.css';
 
 
@@ -93,7 +94,7 @@ class FillForm extends React.Component {
 
             <div><main>
                 <FillFormTopic />
-
+                <FillFormButton />
             </main></div>
         )
     }
