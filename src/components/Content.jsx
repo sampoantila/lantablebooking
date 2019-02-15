@@ -80,6 +80,10 @@ class Content extends Component {
             </div>
             :
             <div>
+                <div style={{margin: 10}}>
+                    <span style={{color: "#31a6fe", fontWeight: "bold" }}>HUOM! Ilmoittautuneita on enemmän kuin tässä näkyviä pöytäpaikkoja.<br/>
+                    Järjestämme kyllä kaikille pöytäpaikan, vaikka nämä paikat tuleevat täyteen.</span>
+                </div>
                 <div style={{ margin: 3, color: "#c6c6c6"}}>
                     Vapaana paikkoja: <span>{free}/{total} (varattuja: {reserved})</span>
                 </div>
