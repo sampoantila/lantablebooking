@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class FillFormButton extends Component {
+const FillFormButton = ({ buttonPress }) => {
 
-    render() {
-        return (
-            <div>
-                <br></br>
-                <br></br>
-                <center><button class="positive massive ui button" type="submit">Lähetä</button></center>
-                <br></br>
-                <br></br>
-            </div>
-        )
-    }
+    console.log("button pressed")
+
+    return (
+        <div>
+            <br></br>
+            <br></br>
+            <center><button class="positive massive ui button" type="submit" onClick={buttonPress}>Lähetä</button></center>
+            <br></br>
+            <br></br>
+        </div>
+    )
 }
 
 export default FillFormButton;

@@ -21,10 +21,10 @@ class FillForm extends React.Component {
 
         this.state = {
             users: [
-                { firstName: 'Arto', lastName: 'Hellas', email: 'arto.hellas@gmail.com', id: 1 },
-                { firstName: 'Martti', lastName: 'Tienari', email: 'martti.tienari@yahoo.com', id: 2 },
-                { firstName: 'Arto', lastName: 'Järvinen', email: 'arto.jarvinen@yandex.ru', id: 3 },
-                { firstName: 'Lea', lastName: 'Kutvonen', email: 'lea.kutvonen@iki.fi', id: 4 }
+                { firstName: 'Arto', lastName: 'Hellas', email: 'arto.hellas@gmail.com', phoneNumber: '04023424', id: 1 },
+                { firstName: 'Martti', lastName: 'Tienari', email: 'martti.tienari@yahoo.com', phoneNumber: '0500653245',id: 2 },
+                { firstName: 'Arto', lastName: 'Järvinen', email: 'arto.jarvinen@yandex.ru', phoneNumber: '0400121144',id: 3 },
+                { firstName: 'Lea', lastName: 'Kutvonen', email: 'lea.kutvonen@iki.fi', phoneNumber:'04015151', id: 4 }
             ],
         }
         // this.state = {
@@ -44,7 +44,7 @@ class FillForm extends React.Component {
         this.handleChangeFirstName = this.handleChangeFirstName.bind(this);
         this.handleChangeLastName = this.handleChangeLastName.bind(this);
         this.handleChangeEmail = this.handleChangeEmail.bind(this);
-        this.addNote = this.addNote.bind(this);
+        this.buttonPress = this.buttonPress.bind(this);
     }
 
 
@@ -60,9 +60,9 @@ class FillForm extends React.Component {
         this.setState({ email: event.target.value });
     }
 
-    addNote = (event) => {
+    buttonPress = (event) => {
         event.preventDefault()
-
+        console.log('this button clicked.');
         const noteObject = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
@@ -93,11 +93,27 @@ class FillForm extends React.Component {
         console.log('toimiiko fillform');
         return (
 
-            <div><main>
-                <FillFormTopic />
-                <FillFormContactInfo/>
-                <FillFormButton />
-            </main></div>
+            <div>
+                <main>
+                    <FillFormTopic/>      
+                    <FillFormContactInfo 
+                    firstName={this.firstName}
+                    // lastName={this.lastName}
+                    // email={this.email}
+                    // phonenumber={this.phoneNumber}
+                    changeFirstName={this.handleChangeFirstName}
+                    />
+                    <FillFormButton
+                    buttonPress={this.buttonPress}/>
+
+                </main>
+
+                {/* testing print out */}
+                <div>
+                    {this.state.users.map(name =>
+                        <ul key={name.id}>{name.firstName} {name.lastName} {name.email} {name.phoneNumber}</ul>)}
+                </div>
+            </div>
         )
     }
 }

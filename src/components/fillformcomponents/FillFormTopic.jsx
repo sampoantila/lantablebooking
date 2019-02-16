@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import lion from '../../images/logo_black.png';
-// import { Button } from 'semantic-ui-react'
 
 class FillFormTopic extends Component {
 
     render() {
-        console.log("ddfdf")
         return (
             <div>
                 <main>
