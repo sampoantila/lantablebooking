@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import lion from '../../images/logo_black.png';
 
-class FillFormTopic extends Component {
+const Topic = ({})=> {
 
-    render() {
         return (
             <div>
                 <main>
@@ -32,7 +31,7 @@ class FillFormTopic extends Component {
                 </main>
             </div>
         )
-    }
+    
 }
 
-export default FillFormTopic;
+export default Topic;

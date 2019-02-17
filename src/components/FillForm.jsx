@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import FillFormTopic from './fillformcomponents/FillFormTopic';
-import FillFormContactInfo from './fillformcomponents/FillFormContactInfo';
-import FillFormButton from './fillformcomponents/FillFormButton';
+import Topic from './fillform/Topic';
+import ContactInfo from './fillform/ContactInfo';
+import SubmitButton from './fillform/SubmitButton';
 import '../css/FillForm.css';
 
 
@@ -41,8 +41,8 @@ class FillForm extends React.Component {
         this.setState({ phoneNumber: event.target.value });
     }
 
-    buttonPress = (event) => {
-        event.preventDefault()
+    buttonPress = (e) => {
+        e.preventDefault()
         console.log('button press event clicked');
 
         const noteObject = {
@@ -66,12 +66,15 @@ class FillForm extends React.Component {
             this.setState({
                 users: notes,
             })
+            console.log("cleaning state")
             this.setState({
                 firstName: '',
                 lastName: '',
                 email: '',
                 phoneNumber: '',
             });
+            // window.location.reload()
+          
         }
     }
 
@@ -80,8 +83,8 @@ class FillForm extends React.Component {
         return (
             <div>
                 <main>
-                    <FillFormTopic />
-                    <FillFormContactInfo
+                    <Topic />
+                    <ContactInfo
                         firstName={this.firstName}
                         lastName={this.lastName}
                         email={this.email}
@@ -91,7 +94,7 @@ class FillForm extends React.Component {
                         combHandleChangeEmail={this.handleChangeEmail}
                         combHandleChangePhoneNumber={this.handleChangePhoneNumber}
                     />
-                    <FillFormButton
+                    <SubmitButton
                         buttonPress={this.buttonPress} />
                 </main>
 

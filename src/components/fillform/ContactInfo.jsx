@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
-const FillFormContactInfo = ({ firstName, lastName, email, phoneNumber, combHandleChangeFirstName, combHandleChangeLastName, combHandleChangeEmail, combHandleChangePhoneNumber }) => {
+const ContactInfo = ({ firstName, lastName, email, phoneNumber, combHandleChangeFirstName, combHandleChangeLastName, combHandleChangeEmail, combHandleChangePhoneNumber }) => {
 
-    console.log("FillFormContactInfo works")
+    console.log("ContactInfo works")
 
     return (
         <div>
@@ -12,7 +12,7 @@ const FillFormContactInfo = ({ firstName, lastName, email, phoneNumber, combHand
             <br></br>
             <br></br>
 
-            <form class="ui form">
+            <form class="ui form" autocomplete="off">
                 <center> <div class="four wide field">
                     <div class="ui black circular label"> <div class="textcolor"> <label>Etunimi</label></div></div>
                     <br></br>
@@ -45,4 +45,4 @@ const FillFormContactInfo = ({ firstName, lastName, email, phoneNumber, combHand
     )
 }
 
-export default FillFormContactInfo;
+export default ContactInfo;
