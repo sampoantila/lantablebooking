@@ -2,8 +2,6 @@ import React from 'react';
 
 const FillFormButton = ({ buttonPress }) => {
 
-    console.log("button pressed")
-
     return (
         <div>
             <br></br>
