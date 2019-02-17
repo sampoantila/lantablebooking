@@ -17,27 +17,21 @@ class FillForm extends React.Component {
                 { firstName: 'Lea', lastName: 'Kutvonen', email: 'lea.kutvonen@iki.fi', phoneNumber: '04015151', id: 4 }
             ],
         }
-        this.handleChangeFirstName = this.handleChangeFirstName.bind(this);
-        this.handleChangeLastName = this.handleChangeLastName.bind(this);
-        this.handleChangeEmail = this.handleChangeEmail.bind(this);
-        this.handleChangePhoneNumber = this.handleChangePhoneNumber.bind(this);
-        this.buttonPress = this.buttonPress.bind(this);
     }
 
-    handleChangeFirstName(event) {
-        // console.log("handleChangeFirstName event", event.target.value)
+    handleChangeFirstName = (event) => {
         this.setState({ firstName: event.target.value });
     }
 
-    handleChangeLastName(event) {
+    handleChangeLastName = (event) =>{
         this.setState({ lastName: event.target.value });
     }
 
-    handleChangeEmail(event) {
+    handleChangeEmail = (event) => {
         this.setState({ email: event.target.value });
     }
 
-    handleChangePhoneNumber(event) {
+    handleChangePhoneNumber = (event) => {
         this.setState({ phoneNumber: event.target.value });
     }
 
@@ -74,7 +68,7 @@ class FillForm extends React.Component {
                 phoneNumber: '',
             });
             // window.location.reload()
-          
+
         }
     }
 
