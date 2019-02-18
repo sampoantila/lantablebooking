@@ -11,10 +11,10 @@ class FillForm extends React.Component {
 
         this.state = {
             users: [
-                { firstName: 'Arto', lastName: 'Hellas', email: 'arto.hellas@gmail.com', phoneNumber: '04023424', id: 1 },
-                { firstName: 'Martti', lastName: 'Tienari', email: 'martti.tienari@yahoo.com', phoneNumber: '0500653245', id: 2 },
-                { firstName: 'Arto', lastName: 'Järvinen', email: 'arto.jarvinen@yandex.ru', phoneNumber: '0400121144', id: 3 },
-                { firstName: 'Lea', lastName: 'Kutvonen', email: 'lea.kutvonen@iki.fi', phoneNumber: '04015151', id: 4 }
+                { firstName: 'Ismo', lastName: 'Lammio', email: 'ismo.lammio@gmail.com', phoneNumber: '04023424', id: 1 },
+                { firstName: 'Juha', lastName: 'Hietanen', email: 'juha.hietanen@yahoo.com', phoneNumber: '0500653245', id: 2 },
+                { firstName: 'Antero', lastName: 'Rokka', email: 'antero.rokka@yandex.ru', phoneNumber: '0400121144', id: 3 },
+                { firstName: 'Jenna', lastName: 'Niemi', email: 'jenna.niemi@iki.fi', phoneNumber: '04015151', id: 4 }
             ],
         }
     }
@@ -23,7 +23,7 @@ class FillForm extends React.Component {
         this.setState({ firstName: event.target.value });
     }
 
-    handleChangeLastName = (event) =>{
+    handleChangeLastName = (event) => {
         this.setState({ lastName: event.target.value });
     }
 
@@ -32,43 +32,29 @@ class FillForm extends React.Component {
     }
 
     handleChangePhoneNumber = (event) => {
-        this.setState({ phoneNumber: event.target.value });
+        this.setState({ phoneNumber: event.target.value })
     }
 
     buttonPress = (e) => {
         e.preventDefault()
-        console.log('button press event clicked');
+        console.log('button press event clicked')
 
-        const noteObject = {
+        const parameters = {
             firstName: this.state.firstName,
             lastName: this.state.lastName,
             email: this.state.email,
             phoneNumber: this.state.phoneNumber,
             id: this.state.users.length + 1
         }
-        const notes = this.state.users.concat(noteObject)
-        const result = notes.find(fruit => fruit.email === noteObject.email);
 
-        console.log("käyttäjät", result)
+        const result = this.state.users.find(data => data.email === parameters.email);
 
-        if (result.id < notes.length) {
-            window.alert("sähköposti on jo olemassa palvelussa");
-            this.setState({
-                email: '',
-            });
+        if (result == undefined) {
+            var copyArray = this.state.users.slice();
+            copyArray.push(parameters);
+            this.setState({ users: copyArray })
         } else {
-            this.setState({
-                users: notes,
-            })
-            console.log("cleaning state")
-            this.setState({
-                firstName: '',
-                lastName: '',
-                email: '',
-                phoneNumber: '',
-            });
-            // window.location.reload()
-
+            window.alert("sähköposti on jo olemassa palvelussa");
         }
     }
 
