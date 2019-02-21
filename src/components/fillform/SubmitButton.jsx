@@ -1,6 +1,7 @@
 import React from 'react';
+import { connect } from 'react-redux'
 
-const SubmitButton = ({ buttonPress }) => {
+const SubmitButton = ({}) => {
 
     return (
         <div>
@@ -13,4 +14,8 @@ const SubmitButton = ({ buttonPress }) => {
     )
 }
 
-export default SubmitButton;
+const mapStateToProps = state => ({
+    buttonPress: state.buttonPress
+});
+
+export default connect(mapStateToProps)(SubmitButton); 
