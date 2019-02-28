@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
 import Topic from './fillform/Topic';
 import ContactInfo from './fillform/ContactInfo';
 import SubmitButton from './fillform/SubmitButton';
@@ -64,8 +65,8 @@ class FillForm extends React.Component {
             <div>
                 <main>
                     <Topic />
-                    <ContactInfo
-                        firstName={this.firstName}
+                    {/* <ContactInfo */}
+                        {/* firstName={this.firstName}
                         lastName={this.lastName}
                         email={this.email}
                         phoneNumber={this.phoneNumber}
@@ -73,9 +74,8 @@ class FillForm extends React.Component {
                         combHandleChangeLastName={this.handleChangeLastName}
                         combHandleChangeEmail={this.handleChangeEmail}
                         combHandleChangePhoneNumber={this.handleChangePhoneNumber}
-                    />
-                    <SubmitButton
-                        buttonPress={this.buttonPress} />
+                    /> */}
+                    {/* <SubmitButton /> */}
                 </main>
 
                 {/* testing print out */}
