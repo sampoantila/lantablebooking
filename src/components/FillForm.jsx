@@ -74,8 +74,9 @@ class FillForm extends React.Component {
                         combHandleChangeLastName={this.handleChangeLastName}
                         combHandleChangeEmail={this.handleChangeEmail}
                         combHandleChangePhoneNumber={this.handleChangePhoneNumber}
-                    />
-                    {/* <SubmitButton /> */}
+        /> */}
+        
+                    <SubmitButton />
                 </main>
 
                 {/* testing print out */}
