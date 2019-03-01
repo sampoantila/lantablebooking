@@ -1,6 +1,6 @@
 console.log("toimiiko reducerfillform")
 const initialState = {
-    count: 0
+    count: 123
 };
 
 const reducer = (state = initialState, action) => {

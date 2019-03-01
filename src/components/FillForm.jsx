@@ -65,8 +65,8 @@ class FillForm extends React.Component {
             <div>
                 <main>
                     <Topic />
-                    {/* <ContactInfo */}
-                        {/* firstName={this.firstName}
+                    <ContactInfo />
+                    {/* firstName={this.firstName}
                         lastName={this.lastName}
                         email={this.email}
                         phoneNumber={this.phoneNumber}
@@ -74,7 +74,7 @@ class FillForm extends React.Component {
                         combHandleChangeLastName={this.handleChangeLastName}
                         combHandleChangeEmail={this.handleChangeEmail}
                         combHandleChangePhoneNumber={this.handleChangePhoneNumber}
-                    /> */}
+                    />
                     {/* <SubmitButton /> */}
                 </main>
 
