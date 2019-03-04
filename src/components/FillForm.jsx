@@ -3,10 +3,17 @@ import { connect } from 'react-redux';
 import Topic from './fillform/Topic';
 import ContactInfo from './fillform/ContactInfo';
 import SubmitButton from './fillform/SubmitButton';
+import ContactTest from './fillform/ContactTest';
 import '../css/FillForm.css';
 
 
 class FillForm extends React.Component {
+
+    submit = values => {
+        // print the form values to the console
+        console.log('submit value', values.firstName)
+    }
+
     constructor(props) {
         super(props);
 
@@ -65,7 +72,9 @@ class FillForm extends React.Component {
             <div>
                 <main>
                     <Topic />
-                    <ContactInfo />
+                    {/* <ContactInfo /> */}
+                    <ContactInfo onSubmit={this.submit} />
+                    <ContactTest onSubmit={this.submit} />
                     {/* firstName={this.firstName}
                         lastName={this.lastName}
                         email={this.email}
@@ -74,9 +83,9 @@ class FillForm extends React.Component {
                         combHandleChangeLastName={this.handleChangeLastName}
                         combHandleChangeEmail={this.handleChangeEmail}
                         combHandleChangePhoneNumber={this.handleChangePhoneNumber}
-        /> */}
-        
-                    <SubmitButton />
+        />
+                    {/*         
+                    <SubmitButton /> */}
                 </main>
 
                 {/* testing print out */}

@@ -11,6 +11,7 @@
     "react-scripts": "^2.1.5",
     "react-spinner": "^0.2.7",
     "redux": "^4.0.1",
+    "redux-form": "^8.1.0",
     "redux-starter-kit": "^0.4.3",
     "semantic-ui-css": "^2.4.1"
   },

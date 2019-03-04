@@ -1,5 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
+import { Field, reduxForm } from 'redux-form'
 
 class ContactInfo extends React.Component {
 
@@ -13,15 +14,15 @@ class ContactInfo extends React.Component {
                 <div class="ui black massive circular label"><div class="textcolor"> Yhteystiedot</div></div>
                 <br></br>
                 <br></br>
-
+                
                 <p>Current count: <strong>{this.props.count}</strong></p>
 
-
-                <form class="ui form" autocomplete="off">
+                <form class="ui form" autocomplete="off" >
                     <center> <div class="four wide field">
                         <div class="ui black circular label"> <div class="textcolor"> <label>Etunimi</label></div></div>
                         <br></br>
                         <br></br>
+                        <Field name="firstName" input type="text" component="input" type="text" placeholder="Etunimi" />
                         {/* <input type="text" name="first-name" placeholder="Etunimi" value={firstName} onChange={combHandleChangeFirstName} /> */}
                     </div>
 
@@ -51,12 +52,25 @@ class ContactInfo extends React.Component {
     }
 }
 
-const mapStateToProps = state => {
-    console.log(state)
-    return {
-        count: state.count
-    }
-}
+
+let ContactForm = props => {
+    const { handleSubmit } = props
+    return <form onSubmit={handleSubmit}>{/* form body*/}</form>
+  }
+  
+  ContactInfo = reduxForm({
+    // a unique name for the form
+    form: 'ui form'
+  })(ContactInfo)
+  
+  export default ContactInfo
+
+// const mapStateToProps = state => {
+//     console.log(state)
+//     return {
+//         count: state.count
+//     }
+// }
 
 
-export default connect(mapStateToProps)(ContactInfo);
+// export default connect(mapStateToProps)(ContactInfo);
