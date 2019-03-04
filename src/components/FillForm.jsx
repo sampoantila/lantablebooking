@@ -15,9 +15,10 @@ let FillForm = props => {
                 <ContactInfo onSubmit={props.submit} />
 
                 {/* <ContactTest onSubmit={props.submit} /> */}
-
                 <div>
-                    <button type="submit">Submit</button>
+                    <br />
+                    <br />
+                    <center><button class="positive massive ui button" type="submit">Lähetä</button></center>
                 </div>
             </main>
         </form>

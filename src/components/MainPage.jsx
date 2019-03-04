@@ -12,7 +12,7 @@ class MainPage extends Component {
 
     render() {
         return <div>
-            <FillForm onSubmit={this.submit}/>
+            <FillForm onSubmit={this.submit} />
             {/* <Header /> */}
             {/* <Content /> */}
             {/* <Footer /> */}
