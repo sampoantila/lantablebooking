@@ -11,19 +11,31 @@ let ContactTest = props => {
             <br></br>
             <br></br>
 
-            <div>
-                <label htmlFor="firstName">First Name</label>
-                <Field name="firstName" component="input" type="text" />
-            </div>
-            <div>
-                <label htmlFor="lastName">Last Name</label>
-                <Field name="lastName" component="input" type="text" />
-            </div>
-            <div>
-                <label htmlFor="email">Email</label>
-                <Field name="email" component="input" type="email" />
-            </div>
-            {/* <button type="submit">Submit</button> */}
+            <form class="ui form" autocomplete="off" >
+            <div class="four wide field">
+                        <div class="ui black circular label"> <div class="textcolor"> <label>Etunimi</label></div></div>
+                        <br></br>
+                        <br></br>
+                        <Field name="firstName" input type="text" component="input" type="text" placeholder="Etunimi" />
+                    </div> 
+
+            
+            </form>
+            <form class="ui form" autocomplete="off" >
+                <div>
+                    <label htmlFor="firstName">First Name</label>
+                    <Field name="firstName" component="input" type="text" />
+                </div>
+                <div>
+                    <label htmlFor="lastName">Last Name</label>
+                    <Field name="lastName" component="input" type="text" />
+                </div>
+                <div>
+                    <label htmlFor="email">Email</label>
+                    <Field name="email" component="input" type="email" />
+                </div>
+                {/* <button type="submit">Submit</button> */}
+            </form>
         </form>
     )
 }

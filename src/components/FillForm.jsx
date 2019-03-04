@@ -12,13 +12,16 @@ let FillForm = props => {
         <form onSubmit={handleSubmit}>
             <main>
                 <Topic />
-                <ContactTest onSubmit={props.submit} />
+                <ContactInfo onSubmit={props.submit} />
+
+                {/* <ContactTest onSubmit={props.submit} /> */}
 
                 <div>
                     <button type="submit">Submit</button>
                 </div>
             </main>
         </form>
+
     )
 }
 

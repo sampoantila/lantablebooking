@@ -1,76 +1,55 @@
 import React from 'react';
-// import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form'
 
-class ContactInfo extends React.Component {
+let ContactInfo = props => {
+    const { handleSubmit } = props
+    return (
+        <form onSubmit={handleSubmit}>
+            <br></br>
+            <br></br>
+            <div class="ui black massive circular label"><div class="textcolor"> Yhteystiedot</div></div>
+            <br></br>
+            <br></br>
 
-    render() {
-        console.log("ContactInfo works")
 
-        return (
-            <div>
-                <br></br>
-                <br></br>
-                <div class="ui black massive circular label"><div class="textcolor"> Yhteystiedot</div></div>
-                <br></br>
-                <br></br>
-                
-                <p>Current count: <strong>{this.props.count}</strong></p>
-
-                <form class="ui form" autocomplete="off" >
-                    <center> <div class="four wide field">
+            <form class="ui form" autocomplete="off" >
+                <center>
+                    <div class="four wide field">
                         <div class="ui black circular label"> <div class="textcolor"> <label>Etunimi</label></div></div>
                         <br></br>
                         <br></br>
                         <Field name="firstName" input type="text" component="input" type="text" placeholder="Etunimi" />
-                        {/* <input type="text" name="first-name" placeholder="Etunimi" value={firstName} onChange={combHandleChangeFirstName} /> */}
                     </div>
 
-                        <div class="four wide field">
-                            <div class="ui black circular label"> <div class="textcolor"><label>Sukunimi</label></div> </div>
-                            <br></br>
-                            <br></br>
-                            {/* <input type="text" name="last-name" placeholder="Sukunimi" value={lastName} onChange={combHandleChangeLastName} /> */}
-                        </div>
+                    <div class="four wide field">
+                        <div class="ui black circular label"> <div class="textcolor"><label>Sukunimi</label></div> </div>
+                        <br></br>
+                        <br></br>
+                        <Field name="lastName" input type="text" component="input" type="text" placeholder="Sukunimi" />
+                    </div>
 
-                        <div class="four wide field">
-                            <div class="ui black circular label"><div class="textcolor"> <label>Sähköposti</label></div> </div>
-                            <br></br>
-                            <br></br>
-                            {/* <input type="text" name="email" placeholder="Sähköposti" value={email} onChange={combHandleChangeEmail} /> */}
-                        </div>
+                    <div class="four wide field">
+                        <div class="ui black circular label"><div class="textcolor"> <label>Sähköposti</label></div> </div>
+                        <br></br>
+                        <br></br>
+                        <Field name="email" input type="text" component="input" type="text" placeholder="Sähköposti" />
+                    </div>
 
-                        <div class="four wide field">
-                            <div class="ui black circular label"> <div class="textcolor"><label>Puhelinnumero</label></div></div>
-                            <br></br>
-                            <br></br>
-                            {/* <input type="text" name="phoneNumber" placeholder="Puhelinnumero" value={phoneNumber} onChange={combHandleChangePhoneNumber} /> */}
-                        </div></center>
-                </form>
-            </div>
-        )
-    }
+                    <div class="four wide field">
+                        <div class="ui black circular label"> <div class="textcolor"><label>Puhelinnumero</label></div></div>
+                        <br></br>
+                        <br></br>
+                        <Field name="phoneNumber" input type="text" component="input" type="text" placeholder="Puhelinnumero" />
+                    </div>
+                </center>
+            </form>
+        </form>
+    )
 }
 
-
-let ContactForm = props => {
-    const { handleSubmit } = props
-    return <form onSubmit={handleSubmit}>{/* form body*/}</form>
-  }
-  
-  ContactInfo = reduxForm({
+ContactInfo = reduxForm({
     // a unique name for the form
-    form: 'ui form'
-  })(ContactInfo)
-  
-  export default ContactInfo
+    form: 'contact'
+})(ContactInfo)
 
-// const mapStateToProps = state => {
-//     console.log(state)
-//     return {
-//         count: state.count
-//     }
-// }
-
-
-// export default connect(mapStateToProps)(ContactInfo);
+export default ContactInfo
