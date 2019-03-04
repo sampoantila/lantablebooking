@@ -5,45 +5,44 @@ let ContactInfo = props => {
     const { handleSubmit } = props
     return (
         <form onSubmit={handleSubmit}>
-            <br></br>
-            <br></br>
-            <div class="ui black massive circular label"><div class="textcolor"> Yhteystiedot</div></div>
-            <br></br>
-            <br></br>
+            <center>
+                <br />
+                <br />
+                <div class="ui black massive circular label"><div class="textcolor"> Yhteystiedot</div></div>
+                <br />
+                <br />
 
-            <form class="ui form" autocomplete="off" >
-                <center>
+                <form class="ui form" autocomplete="off" >
                     <div class="two wide field">
                         <div class="ui black circular label"> <div class="textcolor"> <label>Etunimi</label></div></div>
-                        <br></br>
-                        <br></br>
-                        <Field name="firstName" input type="text" component="input" type="text" placeholder="Etunimi" />
+                        <br />
+                        <br />
+                        <Field name="firstName" type="text" component="input" placeholder="Etunimi" />
                     </div>
 
                     <div class="two wide field">
                         <div class="ui black circular label"> <div class="textcolor"><label>Sukunimi</label></div> </div>
-                        <br></br>
-                        <br></br>
-                        <Field name="lastName" input type="text" component="input" type="text" placeholder="Sukunimi" />
+                        <br />
+                        <br />
+                        <Field name="lastName" type="text" component="input" placeholder="Sukunimi" />
                     </div>
 
                     <div class="two wide field">
                         <div class="ui black circular label"><div class="textcolor"> <label>Sähköposti</label></div> </div>
-                        <br></br>
-                        <br></br>
+                        <br />
+                        <br />
                         <label htmlFor="email"></label>
-                        <Field name="email" component="input" type="email" />
-                        {/* <Field name="email" component="input" type="email" placeholder="Sähköposti" /> */}
+                        <Field name="email" component="input" type="email" placeholder="Sähköposti" />
                     </div>
 
                     <div class="two wide field">
                         <div class="ui black circular label"> <div class="textcolor"><label>Puhelinnumero</label></div></div>
-                        <br></br>
-                        <br></br>
-                        <Field name="phoneNumber" input type="text" component="input" type="text" placeholder="Puhelinnumero" />
+                        <br />
+                        <br />
+                        <Field name="phoneNumber" component="input" type="text" placeholder="Puhelinnumero" />
                     </div>
-                </center>
-            </form>
+                </form>
+            </center>
         </form>
     )
 }
