@@ -31,7 +31,9 @@ let ContactInfo = props => {
                         <div class="ui black circular label"><div class="textcolor"> <label>Sähköposti</label></div> </div>
                         <br></br>
                         <br></br>
-                        <Field name="email" input type="text" component="input" type="email" placeholder="Sähköposti" />
+                        <label htmlFor="email"></label>
+                        <Field name="email" component="input" type="email" />
+                        {/* <Field name="email" component="input" type="email" placeholder="Sähköposti" /> */}
                     </div>
 
                     <div class="two wide field">
