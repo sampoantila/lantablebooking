@@ -5,9 +5,14 @@ import FillForm from './FillForm';
 // import Content from './Content';
 
 class MainPage extends Component {
+    submit = values => {
+        // print the form values to the console
+        console.log(values)
+    }
+
     render() {
         return <div>
-            <FillForm />
+            <FillForm onSubmit={this.submit}/>
             {/* <Header /> */}
             {/* <Content /> */}
             {/* <Footer /> */}
