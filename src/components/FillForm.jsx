@@ -6,17 +6,19 @@ import Guardians from './fillform/Guardians';
 import TableReservation from './fillform/TableReservation';
 import '../css/FillForm.css';
 import { Field, reduxForm } from 'redux-form'
+import Days from './fillform/Days';
 
 let FillForm = props => {
     const { handleSubmit } = props
     return (
         <form onSubmit={handleSubmit}>
             <main>
-                {/* <Topic /> */}
-                {/* <HeaderText /> */}
-                {/* <ContactInfo onSubmit={props.submit} /> */}
-                {/* <Guardians onSubmit={props.submit} /> */}
-                <TableReservation onSubmit={props.submit} />
+                <Topic />
+                <HeaderText />
+                <ContactInfo />
+                <Guardians />
+                <TableReservation />
+                <Days/>
 
 
 

@@ -2,8 +2,8 @@ import React from 'react';
 import { Field, reduxForm } from 'redux-form'
 
 
-let TableReservation = props => {
-    const { handleSubmit } = props
+let TableReservation = () => {
+
     return (
         <div>
             <br />
@@ -16,7 +16,7 @@ let TableReservation = props => {
             <center>
                 <div class="ui black compact message">
                     <div class="textcolor">
-                    Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
+                        Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
                 <p />Yksi pistorasia ja yksi nettipistoke per pöytä.
                 <p />Tuo oma jatkojohto ja oma nettipiuha (varajohtoja löytyy kyllä).
                     </div>
@@ -74,8 +74,8 @@ let TableReservation = props => {
                             type="checkbox"
                         />
                         <label><div class="ui black circular label"><div class="textcolor">Muu</div></div></label>
-                        <div class="ui input">  
-                        <Field name="otherSpeci" type="text" component="input" placeholder="Mite muuta teet :-)" /></div>
+                        <div class="ui input">
+                            <Field name="otherSpeci" type="text" component="input" placeholder="Mite muuta teet :-)" /></div>
                     </div>
                 </div>
             </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form'
 
-let ContactInfo = props => {
-    const { handleSubmit } = props
+let ContactInfo = () => {
     return (
-        <form onSubmit={handleSubmit}>
+        <div>
             <center>
+
                 <br />
                 <br />
                 <div class="ui black massive circular label"><div class="textcolor"> Yhteystiedot</div></div>
@@ -43,7 +43,7 @@ let ContactInfo = props => {
                     </div>
                 </form>
             </center>
-        </form>
+        </div>
     )
 }
 
