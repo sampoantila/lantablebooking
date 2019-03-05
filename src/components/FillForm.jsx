@@ -7,6 +7,7 @@ import TableReservation from './fillform/TableReservation';
 import '../css/FillForm.css';
 import { Field, reduxForm } from 'redux-form'
 import Days from './fillform/Days';
+import Tournaments from './fillform/Tournaments';
 
 let FillForm = props => {
     const { handleSubmit } = props
@@ -19,6 +20,7 @@ let FillForm = props => {
                 <Guardians />
                 <TableReservation />
                 <Days/>
+                <Tournaments />
 
 
 
