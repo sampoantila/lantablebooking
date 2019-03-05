@@ -16,10 +16,10 @@ let TableReservation = props => {
             <center>
                 <div class="ui black compact message">
                     <div class="textcolor">
-                        Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
+                    Pöydän koko on 85 x 75 cm ja vieressä on pehmustettu tuoli!
                 <p />Yksi pistorasia ja yksi nettipistoke per pöytä.
                 <p />Tuo oma jatkojohto ja oma nettipiuha (varajohtoja löytyy kyllä).
-                </div>
+                    </div>
                 </div>
             </center>
 
@@ -68,25 +68,14 @@ let TableReservation = props => {
                 <div class="five column centered row">
                     <div class="column ui checkbox">
                         <Field
-                            name="hangAround"
-                            id="hangAround"
+                            name="other"
+                            id="other"
                             component="input"
                             type="checkbox"
                         />
                         <label><div class="ui black circular label"><div class="textcolor">Muu</div></div></label>
-                        <div class="ui input">  <Field name="hangAroundMisc" type="text" component="input" placeholder="Mite muuta teet :-)" /></div>
-                    </div>
-                </div>
-
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
-                        <input type="checkbox" name="example" />
-                        <label><div class="ui black circular label"><div class="textcolor">Muu</div></div></label>
-                    </div>
-                    <div class="five column centered row">
-                        <br></br>
-                        <div class="ui input"><input type="text" placeholder="Mite muuta teet :-)" /></div>
-
+                        <div class="ui input">  
+                        <Field name="otherSpeci" type="text" component="input" placeholder="Mite muuta teet :-)" /></div>
                     </div>
                 </div>
             </div>
