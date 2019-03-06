@@ -9,6 +9,7 @@ import { Field, reduxForm } from 'redux-form'
 import Days from './fillform/Days';
 import Tournaments from './fillform/Tournaments';
 import Food from './fillform/Food';
+import SubmitButton from './fillform/SubmitButton';
 
 let FillForm = props => {
     const { handleSubmit } = props
@@ -23,15 +24,9 @@ let FillForm = props => {
                 <Days />
                 <Tournaments />
                 <Food />
-
-                <div>
-                    <br />
-                    <br />
-                    <center><button class="positive massive ui button" type="submit">Lähetä</button></center>
-                </div>
+                <SubmitButton onSubmit={handleSubmit} />
             </main>
         </form>
-
     )
 }
 

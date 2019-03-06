@@ -74,6 +74,7 @@ let TableReservation = () => {
                             type="checkbox"
                         />
                         <label><div class="ui black circular label"><div class="textcolor">Muu</div></div></label>
+                        <br />
                         <div class="ui input">
                             <Field name="otherSpeci" type="text" component="input" placeholder="Mite muuta teet :-)" /></div>
                     </div>

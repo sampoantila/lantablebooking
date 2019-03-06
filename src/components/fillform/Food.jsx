@@ -70,9 +70,10 @@ let Food = () => {
 
                 <div class="five column centered row">
                     <div class="column ui checkbox">
-                        <input type="checkbox"/>
+                        <input type="checkbox" />
                         <Field name="otherfood" id="otherfood" component="input" type="checkbox" />
                         <label><div class="ui black circular label"><div class="textcolor">Muu</div></div></label>
+                        <br/>
                         <div class="ui input"><Field name="otherfoodspec" type="text" component="input" placeholder="Mikä ruoka :-)" /></div>
                     </div>
                 </div>

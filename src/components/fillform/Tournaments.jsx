@@ -121,6 +121,7 @@ let Tournaments = () => {
                     <div class="column ui checkbox">
                         <Field name="other" id="other" component="input" type="checkbox" />
                         <label><div class="ui black circular label"><div class="textcolor">Muu</div></div></label>
+                        <br/>
                         <div class="ui input"><Field name="otherGame" type="text" component="input" placeholder="Mikä muu peli :-)" /></div>
                     </div>
                 </div>
