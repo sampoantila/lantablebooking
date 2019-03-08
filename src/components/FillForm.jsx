@@ -16,14 +16,14 @@ let FillForm = props => {
     return (
         <form onSubmit={handleSubmit}>
             <main>
-                <Topic />
-                <HeaderText />
-                <ContactInfo />
-                <Guardians />
-                <TableReservation />
-                <Days />
-                <Tournaments />
-                <Food />
+                {/* <Topic /> */}
+                {/* <HeaderText /> */}
+                {/* <ContactInfo /> */}
+                {/* <Guardians /> */}
+                {/* <TableReservation /> */}
+                {/* <Days /> */}
+                {/* <Tournaments /> */}
+                {/* <Food /> */}
                 <SubmitButton onSubmit={handleSubmit} />
             </main>
         </form>
