@@ -7,32 +7,32 @@ let Days = () => {
             <br />
             <br />
             <br />
-            <div class="ui black massive circular label"><div class="textcolor">Osallistumispäivät</div></div>
+            <div className="ui black massive circular label"><div className="textcolor">Osallistumispäivät</div></div>
             <br />
             <br />
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field
                             name="days1"
                             id="dats1"
                             component="input"
                             type="checkbox"
                         />
-                        <label><div class="ui black circular label"><div class="textcolor">torstai - perjantai </div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">torstai - perjantai </div></div></label>
                     </div>
                 </div>
 
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field
                             name="days2"
                             id="days2"
                             component="input"
                             type="checkbox"
                         />
-                        <label><div class="ui black circular label"><div class="textcolor">perjantai - lauantai</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">perjantai - lauantai</div></div></label>
                     </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ let SubmitButton = props => {
             <div>
                 <br />
                 <br />
-                <center><button class="positive massive ui button" type="submit">Lähetä</button></center>
+                <center><button className="positive massive ui button" type="submit">Lähetä</button></center>
                 <br />
                 <br />
                 <br />

@@ -7,13 +7,13 @@ const Topic = () => {
         <main>
             <br />
             <br />
-            <center><img class="ui medium image" src={lion} alt="aslan logo"/></center>
+            <center><img className="ui medium image" src={lion} alt="aslan logo"/></center>
             <br />
             <br />
             <br />
             <br />
 
-            <div class="maintopic">
+            <div className="maintopic">
                 <link rel="stylesheet" type="text/css" />
                 <b>AsLANin</b>
             </div>
@@ -23,7 +23,7 @@ const Topic = () => {
             <br />
             <br />
 
-            <div class="topic">
+            <div className="topic">
                 <link rel="stylesheet" type="text/css" />
                 <b>ILMOITTAUTUMINEN</b>
             </div>

@@ -5,11 +5,11 @@ const HeaderText = () => {
         <div>
             <br/>
             <br/>
-            <div class="ui black compact message">
-                <div class="header">
+            <div className="ui black compact message">
+                <div className="header">
                     AsLANien tiedot
                 </div>
-                <ul class="list">
+                <ul className="list">
                     <li><b>Ajankohta:</b> torstai 21.2. - lauantai 23.2.2019</li>
                     <li><b>Osoite:</b> Palo-ojantie 1, 05810 Hyvinkää </li>
                     <li><b>Lisätietoa:</b> 045 1114505 / sampo.antila@hyvinkaanhelluntaisrk.fi</li>

@@ -6,16 +6,16 @@ let Tournaments = () => {
         <div>
             <br />
             <br />
-            <div class="ui black massive circular label"><div class="textcolor">Turnaukset</div></div>
+            <div className="ui black massive circular label"><div className="textcolor">Turnaukset</div></div>
             <br />
             <br />
 
-            <div class="ui black compact message">
-                <div class="textcolor"> <div class="header">
+            <div className="ui black compact message">
+                <div className="textcolor"> <div className="header">
                 </div>
                 </div>
 
-                <div class="textcolor"><ul class="list">
+                <div className="textcolor"><ul className="list">
                     <li>Tässä turnaukset joita voidaan järjestetää.</li>
                     <li>Muistathan asentaa ja päivittää (!) pelit jo kotona</li>
                     <li>Valitse mihin haluat osallistua, niin tiedetään valmistella paremmin.</li>
@@ -26,103 +26,103 @@ let Tournaments = () => {
             <br />
             <br />
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="fortnite" id="fortnite" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Fortnite</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Fortnite</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="teamFortress2" id="teamFortress2" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Team Fortress 2</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Team Fortress 2</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="overwatch" id="overwatch" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Overwatch</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Overwatch</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="brawlhalla" id="brawlhalla" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Brawlhalla</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Brawlhalla</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="tetris" id="tetris" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Tetris</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Tetris</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="nhl15" id="nhl15" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Konsoli: NHL15</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Konsoli: NHL15</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="liero" id="liero" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">liero <a href="http://www.liero.be/"> http://www.liero.be/</a></div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">liero <a href="http://www.liero.be/"> http://www.liero.be/</a></div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="footballPhysical" id="footballPhysical" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Pöytäfutis (fyysinen)</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Pöytäfutis (fyysinen)</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="pingbongPhysical" id="pingbongPhysical" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Pingis (fyysinen)</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Pingis (fyysinen)</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="billijard" id="billijard" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Biljardi (fyysinen, kasipallo/ysipallo yms)</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Biljardi (fyysinen, kasipallo/ysipallo yms)</div></div></label>
                     </div>
                 </div>
             </div>
 
-            <div class="ui one column centered grid">
-                <div class="five column centered row">
-                    <div class="column ui checkbox">
+            <div className="ui one column centered grid">
+                <div className="five column centered row">
+                    <div className="column ui checkbox">
                         <Field name="other" id="other" component="input" type="checkbox" />
-                        <label><div class="ui black circular label"><div class="textcolor">Muu</div></div></label>
+                        <label><div className="ui black circular label"><div className="textcolor">Muu</div></div></label>
                         <br/>
-                        <div class="ui input"><Field name="otherGame" type="text" component="input" placeholder="Mikä muu peli :-)" /></div>
+                        <div className="ui input"><Field name="otherGame" type="text" component="input" placeholder="Mikä muu peli :-)" /></div>
                     </div>
                 </div>
             </div>
