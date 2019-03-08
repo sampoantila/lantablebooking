@@ -5,7 +5,7 @@ import ContactInfo from './fillform/ContactInfo';
 import Guardians from './fillform/Guardians';
 import TableReservation from './fillform/TableReservation';
 import '../css/FillForm.css';
-import { Field, reduxForm } from 'redux-form'
+import {reduxForm } from 'redux-form'
 import Days from './fillform/Days';
 import Tournaments from './fillform/Tournaments';
 import Food from './fillform/Food';

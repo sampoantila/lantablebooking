@@ -1,8 +1,8 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form'
+import {reduxForm } from 'redux-form'
 
 let SubmitButton = props => {
-    console.log("submit button")
+    // console.log("submit button")
     const { handleSubmit } = props
 
     return (
@@ -10,7 +10,6 @@ let SubmitButton = props => {
             <div>
                 <br />
                 <br />
-                {/* <button type="submit">Submit</button> */}
                 <center><button class="positive massive ui button" type="submit">Lähetä</button></center>
                 <br />
                 <br />

@@ -7,7 +7,7 @@ const Topic = () => {
         <main>
             <br />
             <br />
-            <center><img class="ui medium image" src={lion} /></center>
+            <center><img class="ui medium image" src={lion} alt="aslan logo"/></center>
             <br />
             <br />
             <br />
