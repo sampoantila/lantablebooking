@@ -1,37 +1,27 @@
 import React from 'react';
-import {field, reduxForm } from 'redux-form'
+import { reduxForm } from 'redux-form'
+
+import { Form } from 'redux-form' // ES6
+
 
 let SubmitButton = props => {
     // console.log("submit button")
-    const { handleSubmit } = props
+    // const { handleSubmit } = props
 
     return (
-        // <center>
         <div>
-            <form>
-                <h1>ei toimii</h1>
-            </form>
-            {/* <form onSubmit={handleSubmit} id="name">
-                <div>
-                    <br />
-                    <br />
-                    <div>
-                        <button type="submit">Lähetä</button>
-                    </div>
-                    {/* <button type="submit" className="positive massive ui button" form="name">Lähetä</button> */}
-            {/* <br />
             <br />
             <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br /> */}
-            {/* </div> */}
-            {/* <form /> */}
-            {/* <form /> */}
 
+            <button input type="submit" className="positive massive ui button">Lähetä</button>
 
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     )
 }
