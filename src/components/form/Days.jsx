@@ -16,7 +16,7 @@ let Days = () => {
                     <div className="column ui checkbox">
                         <Field
                             name="days1"
-                            id="dats1"
+                            id="days1"
                             component="input"
                             type="checkbox"
                         />
