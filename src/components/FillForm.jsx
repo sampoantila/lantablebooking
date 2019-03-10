@@ -15,7 +15,6 @@ let FillForm = props => {
     const { handleSubmit } = props
     return (
         <div>
-            {/* <form onSubmit={handleSubmit}> */}
             <main>
                 <Topic /> 
                 <HeaderText />
@@ -26,7 +25,7 @@ let FillForm = props => {
                 <Tournaments /> 
                 <Food />
                 <form onSubmit={handleSubmit}>
-                    <SubmitButton onSubmit={handleSubmit} />
+                    <SubmitButton  />
                 </form>
             </main>
         </div>
