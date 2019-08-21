@@ -88,13 +88,13 @@ class Content extends Component {
                             <span style={{color: "#31a6fe", fontWeight: "bold" }}>HUOM! Ilmoittautuneita on enemmän kuin tässä näkyviä pöytäpaikkoja.<br/>
                             Järjestämme kyllä kaikille pöytäpaikan, vaikka nämä paikat tuleevat täyteen.</span>
                         </div>
-                        <div style={{ margin: 3, color: "#c6c6c6"}}>
-                            Vapaana paikkoja: <span>{free}/{total} (varattuja: {reserved})</span>
-                        </div>
                     </>
                     :
                     null
                 }
+                <div style={{ margin: 3, color: "#c6c6c6"}}>
+                    Vapaana paikkoja: <span>{free}/{total} (varattuja: {reserved})</span>
+                </div>
                 <div style={{marginTop: 10}}>
                     <span>Kirjoita sähköpostisi ja saamasi koodi, sen jälkeen voita varata yhden pöydän vapaista (vihreistä).<br/>
                     Varauksen voi vaihtaa klikkaamalla toista pöytää. Voit varata vain yhden pöydän.</span>
