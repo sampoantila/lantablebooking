@@ -102,23 +102,26 @@ class Content extends Component {
                 </div>
             </div>
             }
-            <br/>
             <div className="clearfix">
-                <div style={{float: "left"}}>
-                    <TableGroup name="A" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-                    <TableGroup name="B" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-                    <br/>
-                    <TableGroup name="C" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-                    <TableGroup name="D" right booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-                    <br/>
+                <div className="table-layout">
+                    <div style={{float: 'left', marginLeft: 40}}>
+                        <TableGroup name="A" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                        <TableGroup name="B" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                        <br/>
+                        <TableGroup name="C" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                        <TableGroup name="D" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                        <br/>
+                        <TableGroup name="E" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                        <TableGroup name="F" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                    </div>
+                    <div style={{paddingLeft: 100, float: 'left', marginBottom: 60}}>
+                        <TableGroup name="G" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
+                        <TableGroup name="H" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} extra />
+                    </div>
+                    <div className="food-table">
+                        Ruokapöytä
+                    </div>
                 </div>
-                <div>
-                    <TableGroup name="E" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-                    <TableGroup name="F" booked={this.state.booked} booking={this.state.booking} toggle={this.toggle} />
-                </div>
-            </div>
-            <div className="food-table">
-                Ruokapöytä
             </div>
         </div>;
     }

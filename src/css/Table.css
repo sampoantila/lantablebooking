@@ -29,7 +29,7 @@
 
 .table-group-label {
     position: absolute;
-    left: 265px;
+    left: 165px;
     top: 72px;
     z-index: 10;
     background-color: aliceblue;
@@ -46,50 +46,32 @@
     position: relative;
 }
 
-.table-group-content-left {
-    transform: rotate(-30deg);
-}
-
-.table-group-content-right {
-    transform: rotate(210deg);
-}
-
-.table-group-content-vertical {
-    transform: rotate(-90deg);
-    margin-top: 250px;
-}
-
 .table-group {
     display: inline-block;
     padding-top: 80px;
-    margin-top: 0px;
-    margin-left: 20px;
-    margin-right: 10px;
-    margin-bottom: 0px;
 }
 
 .table-group-normal {
-    width: 470px;
-    height: 270px;
+    width: 350px;
+    height: 190px;
 }
 
-.table-group-narrow {
-    width: 470px;
-    height: 270px;
+.table-group-extra {
+    width: 630px;
+    height: 190px;
 }
 
 .food-table {
     color: black;
     border: 1px solid rgba(0,0,0,0.2);
     background-color: silver;
-    display: inline-block;
     border-radius: 2px;
     width: 400px;
     height: 130px;
     line-height: 130px;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    margin-right: 400px;
+    margin-top: -680px;
+    transform: rotate(90deg);
+    float: right;
 }
 
 .table button {
@@ -121,15 +103,13 @@
 }
 
 .table-booking:hover {
-    background-color: steelblue;
+    background-color: lightblue;
     color: whitesmoke;
     font-weight: bold;
 }
 
-.table-rowstart {
-    float: left;
-    width: 85px;
-    height: 125px;
-    transform: rotate(-90deg);
-    padding-top: 60px;
-}
+.table-layout {
+    width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }

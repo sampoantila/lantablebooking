@@ -3,35 +3,22 @@ import Table from './Table';
 
 class TableGroup extends Component {
     render() {
-        var contentClass = " table-group-content-left";
         var labelClass = "table-group-label";
         var sizeClass = " table-group-normal";
-
-        if (this.props.right) {
-            contentClass = " table-group-content-right";
-            labelClass += " upside-down";
-        }
-        if (this.props.vertical) {
-            contentClass = " table-group-content-vertical";
-            sizeClass = " table-group-narrow";
-        }
 
         var tables = [1,2,3,4];
         var flipTables = [5,6,7,8];
 
-        if (this.props.right) {
-            tables = [8,7,6,5];
-            flipTables = [4,3,2,1];
+        if (this.props.extra) {
+            sizeClass = " table-group-extra";
+            tables = [1,2,3,4,5,6,7];
+            flipTables = [8,9,10,11,12,13,14];
         }
 
+
         return <div className={"table-group" + sizeClass }>
-            <div className={"table-group-content" + contentClass}>
+            <div className={"table-group-content"}>
                 <div className={labelClass}>{this.props.name}</div>
-                <Table location={this.props.name+"9"}
-                    booked={this.props.booked}
-                    booking={this.props.booking}
-                    toggle={this.props.toggle}
-                    rowstart />
                 {tables.map(item => (
                     <Table
                         key={item}
@@ -39,7 +26,7 @@ class TableGroup extends Component {
                         booked={this.props.booked}
                         booking={this.props.booking}
                         toggle={this.props.toggle}
-                        right={this.props.right} />
+                    />
                 ))}
                 {flipTables.map(item => (
                     <Table
@@ -49,7 +36,7 @@ class TableGroup extends Component {
                         booked={this.props.booked}
                         booking={this.props.booking}
                         toggle={this.props.toggle}
-                        right={this.props.right} />
+                    />
                 ))}
             </div>
         </div>;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "../css/Table.css";
+import classNames from 'classnames';
 
 class Table extends Component {
     constructor(props) {
@@ -24,50 +25,18 @@ class Table extends Component {
     }
 
     render() {
-        var tableClasses = "table";
-        var tableNumberClass = "";
-
-        if (this.props.flip) {
-            tableClasses += " upside-down";
-            tableNumberClass += " upside-down";
-        }
-
-        if (this.props.right)
-        {
-            tableNumberClass = "";
-        }
-
-        if (this.props.right && this.props.flip === undefined)
-        {
-            tableNumberClass += " upside-down";
-        }
-
-        if (this.props.rowstart && this.props.right) {
-            tableClasses += " table-rowstart-right";
-        }
-        else if (this.props.rowstart) {
-            tableClasses += " table-rowstart";
-            tableNumberClass += " upside-down";
-        }
-
-        var tableBooked = "table-free";
-        if (this.state.booked)
-        {
-            tableBooked = "table-booked";
-        }
-
-        if (this.props.booking === this.props.location) {
-            // logged user booking here
-            tableBooked = "table-booking";
-        }
+        var tableClasses = classNames('table', {'upside-down': this.props.flip});
+        var tableNumberClass = classNames('table-normal', 'table-part', {'upside-down': this.props.flip});
+        var buttonClass = classNames('table-button', { 'table-booking': this.props.booking === this.props.location },
+            { 'table-free': !this.state.booked }, { 'table-booked': this.state.booked });
 
         return <div className={tableClasses}>
             <div />
             <div className="table-part table-chair" />
             <div />
             <div>
-                <button className={"table-button " + tableBooked} onClick={this.onTableClick}>
-                    <div className={"table-normal table-part" + tableNumberClass} >
+                <button className={buttonClass} onClick={this.onTableClick}>
+                    <div className={tableNumberClass} >
                         {this.props.location}
                     </div>
                 </button>
