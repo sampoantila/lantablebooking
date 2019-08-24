@@ -68,7 +68,7 @@ class Content extends Component {
 
     render() {
 
-        const total = 6*9;
+        const total = 8*8+6;
         var reserved = this.state.booked.length;
         var free = total - reserved; 
 
